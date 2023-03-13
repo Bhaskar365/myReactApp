@@ -1,46 +1,27 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-function Greeting(){
-  return (
-    <div>
-      <Person />
-      <Message />
-    </div>
-  );
+function BookList(){
+  return <section>
+    <Book />
+    </section>
 }
 
-const Person = () => <h2>john doe</h2>;
-const Message = () => {
-  return <p>This is a message.</p>
-};
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title/>
+      <Author/>
+    </article>
+    );
+}
 
-// function Greeting() {
-//   return (
-//     <React.Fragment>
-//     <div>
-//       <h3>Hello World</h3>
-//       <ul>
-//         <li>
-//           <a href="#">X</a>
-//         </li>
-//         <img src='' />
-//         <input type='' name='' id='' />
-//       </ul>
-//     </div>
-//     </React.Fragment>
-//   );
-// }
+const Image = () => <img src="https://m.media-amazon.com/images/I/51p2SDOCV9L._SX198_BO1,204,203,200_QL40_FMwebp_.jpg" alt="" />
 
-// function Greeting(){
-//   return <h1>
-//     Hello</h1>
-//    return  (
- //             <div>
- //               <h1>......</h1>
- //             </div>
- //           );
-// }
+const Title = () => <h1>I Love You to the Moon and Back</h1>
 
-ReactDom.render(<Greeting/>, document.getElementById('root'));
+const Author = () => <h4>Amelia Hepworth</h4>
+
+ReactDom.render(<BookList/>, document.getElementById('root'));
 
